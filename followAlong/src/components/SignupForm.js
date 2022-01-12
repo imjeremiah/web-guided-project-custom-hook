@@ -30,7 +30,10 @@ const useForm = (initName) => {
   const [values, setValue] = useState(initName);
 
   const handleChanges = e => {
-    setValue(e.target.value);
+    setValue({
+      ...values,
+      lastName: e.target.value
+    });
   };
 
   const clearForm = e => {
@@ -54,6 +57,8 @@ export default function SignupForm() {
     e.preventDefault();
     alert(`${values.firstName} ${values.lastName}`);
   };
+
+  console.log(values);
 
   return (
     <div p={2} className="form">

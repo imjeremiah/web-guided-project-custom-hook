@@ -38,8 +38,6 @@ export default function SignupForm() {
     alert(`${values.firstName} ${values.lastName} ${values.email}`);
   };
 
-  console.log(values);
-
   return (
     <div p={2} className="form">
       <form onSubmit={handleSubmit}>

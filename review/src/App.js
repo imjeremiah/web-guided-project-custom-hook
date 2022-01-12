@@ -7,22 +7,6 @@ import PokeList from './components/PokeList';
 import getPokemen from './services/getPokemen';
 import getPokemon from './services/getPokemon';
 
-
-const usePokeState = () => {
-  const [pokemen, setPokemen] = useState([]);
-  const [selectedPokemon, setSelectedPokemon] = useState({});
-
-  useEffect(() => {
-    setPokemen(getPokemen());
-  }, []);
-
-  const handlePoke = (id) => {
-    getPokemon(id, setSelectedPokemon);
-  };
-
-  return [selectedPokemon, pokemen, handlePoke];
-}
-
 function App() {
   const [selectedPokemon, pokemen, handlePoke] = usePokeState();
   

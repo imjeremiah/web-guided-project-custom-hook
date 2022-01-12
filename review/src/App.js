@@ -4,6 +4,7 @@ import axios from 'axios';
 import data from "../data";
 
 import SelectedPoke from './components/SelectedPoke';
+import PokeList from './components/PokeList';
 
 function App() {
   const [pokemen, setPokemen] = useState([]);

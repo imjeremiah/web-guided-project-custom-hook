@@ -39,7 +39,7 @@ export default function SignupForm() {
     email: ""
   });
 
-  const [name, setName ] = useState("Warren");
+  const [name, setName ] = useLocalStorage("Warren");
 
   const handleSubmit = e => {
     e.preventDefault();

@@ -3,6 +3,8 @@ import "./styles.scss";
 import axios from 'axios';
 import data from "../data";
 
+import SelectedPoke from './components/SelectedPoke';
+
 function App() {
   const [pokemen, setPokemen] = useState([]);
   const [selectedPokemon, setSelectedPokemon] = useState({});

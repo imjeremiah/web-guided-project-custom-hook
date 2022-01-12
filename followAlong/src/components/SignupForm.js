@@ -50,8 +50,6 @@ export default function SignupForm() {
     lastName: "Longmire"
   });
 
-  console.log(values);
-
   const handleSubmit = e => {
     e.preventDefault();
     alert(`${values.firstName} ${values.lastName}`);

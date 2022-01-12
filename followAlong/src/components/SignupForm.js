@@ -41,6 +41,7 @@ const useLocalStorage = (key, initValue) => {
   });
 
   const setStoredValue = (newValue) => {
+    localStorage.setItem(key, newValue);
     setValue(newValue);
   }
 

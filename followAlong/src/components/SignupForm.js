@@ -24,7 +24,9 @@ const useStyles = makeStyles(theme => ({
 }));
 
 
-const useLocalStorage = (initValue) => {
+const useLocalStorage = (key, initValue) => {
+  //useLocalStorage
+  //1. when we set our initialValue check to see if we have saved a localStorage value
   const [ value, setValue] = useState(initValue);
 
   return[value, setValue];
@@ -39,7 +41,7 @@ export default function SignupForm() {
     email: ""
   });
 
-  const [name, setName ] = useLocalStorage("Warren");
+  const [name, setName ] = useLocalStorage("name", "Warren");
 
   const handleSubmit = e => {
     e.preventDefault();

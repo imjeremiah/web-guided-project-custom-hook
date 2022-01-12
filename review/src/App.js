@@ -6,8 +6,8 @@ import data from "../data";
 import SelectedPoke from './components/SelectedPoke';
 
 const PokeList = (props) => {
-  const {pokemen} = props;
-  
+  const {pokemen, handlePoke} = props;
+
   return (<div id="pokeList">
     {pokemen.map((pokemon) => (
       <div
@@ -44,7 +44,7 @@ function App() {
   return (
     <div className="App">
       <SelectedPoke selectedPokemon={selectedPokemon}/>
-      <PokeList pokemen={pokemen}/>
+      <PokeList pokemen={pokemen} handlePoke={handlePoke}/>
     </div>
   );
 }

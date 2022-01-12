@@ -45,7 +45,7 @@ const useLocalStorage = (key, initValue) => {
     setValue(newValue);
   }
 
-  return[value, setValue];
+  return[value, setStoredValue];
 }
 
 export default function SignupForm() {
@@ -57,7 +57,8 @@ export default function SignupForm() {
     email: ""
   });
 
-  const [name, setName ] = useLocalStorage("name", "Warren");
+  // const [name, setName ] = useLocalStorage("name", "Warren");
+  const [name, setName ] = useState("name", "Warren");
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -68,7 +69,7 @@ export default function SignupForm() {
     <div p={2} className="form">
       <h1>{name}</h1>
       <button onClick={()=> {
-        setName("Allison");
+        setName("Chris");
       }}>Change Name</button>
       <form onSubmit={handleSubmit}>
         <fieldset>

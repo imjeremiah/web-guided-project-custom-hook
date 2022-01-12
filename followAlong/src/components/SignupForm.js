@@ -28,14 +28,13 @@ export default function SignupForm() {
   const classes = useStyles();
 
   const [ values, handleChanges, clearForm ] = useForm({
-    firstName: localStorage.getItem('name'),
+    firstName: "",
     lastName: "",
     email: ""
   });
 
   const handleSubmit = e => {
     e.preventDefault();
-    localStorage.setItem("name", Math.random());
     alert(`${values.firstName} ${values.lastName} ${values.email}`);
   };
 

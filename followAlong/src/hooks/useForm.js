@@ -7,7 +7,7 @@ import useLocalStorage from './useLocalStorage';
 //3. Return all needed values from this hook.
 //4. Replace useState with useForm.
 const useForm = (initName) => {
-    const [values, setValue] = useState(initName);
+    const [values, setValue] = useLocalStorage("form", initName);
   
     const handleChanges = e => {
       setValue({

@@ -22,11 +22,10 @@ const useStyles = makeStyles(theme => ({
 }));
 
 //Create useForm Custom Hook:
-//1. make a function called useForm.
+//1. Make a function called useForm.
 //2. Add in all stateful logic into this hook.
-//3. return all needed values from this hook.
+//3. Return all needed values from this hook.
 //4. Replace useState with useForm.
-
 
 export default function SignupForm() {
   const classes = useStyles();

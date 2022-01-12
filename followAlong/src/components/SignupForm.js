@@ -27,18 +27,18 @@ const useStyles = makeStyles(theme => ({
 //3. Return all needed values from this hook.
 //4. Replace useState with useForm.
 const useForm = (initName) => {
-  const [firstName, setFirstName] = useState(initName);
+  const [value, setValue] = useState(initName);
 
   const handleChanges = e => {
-    setFirstName(e.target.value);
+    setValue(e.target.value);
   };
 
   const clearForm = e => {
     e.preventDefault();
-    setFirstName(initName);
+    setValue(initName);
   };
 
-  return([firstName, handleChanges, clearForm]);
+  return([value, handleChanges, clearForm]);
 }
 
 

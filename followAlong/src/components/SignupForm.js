@@ -30,11 +30,9 @@ const useForm = (initName) => {
   const [values, setValue] = useState(initName);
 
   const handleChanges = e => {
-    console.log('target: ', e.target.name);
-
     setValue({
       ...values,
-      lastName: e.target.value
+      [e.target.name]: e.target.value
     });
   };
 

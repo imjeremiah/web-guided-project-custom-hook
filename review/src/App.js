@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "./styles.scss";
-import axios from 'axios';
 
 import SelectedPoke from './components/SelectedPoke';
 import PokeList from './components/PokeList';
 
-import getPokemen from './services/getPokemen'
+import getPokemen from './services/getPokemen';
+import getPokemon from './services/getPokemon';
 
 function App() {
   const [pokemen, setPokemen] = useState([]);

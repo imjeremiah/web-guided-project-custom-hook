@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "./styles.scss";
 import axios from 'axios';
-import data from "../data";
 
 import SelectedPoke from './components/SelectedPoke';
 import PokeList from './components/PokeList';
 
-const getPokemen = () => {
-  return(data);
-}
+import getPokemen from './services/getPokemen'
+
 
 const getPokemon = (id, setSelectedPokemon) => {
   axios.get(`https://pokeapi.co/api/v2/pokemon/${id}/`)

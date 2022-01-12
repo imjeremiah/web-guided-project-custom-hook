@@ -37,6 +37,8 @@ const useForm = () => {
     e.preventDefault();
     setFirstName("");
   };
+
+  return([firstName, handleChanges, clearForm]);
 }
 
 

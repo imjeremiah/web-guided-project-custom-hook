@@ -28,7 +28,7 @@ export default function SignupForm() {
   const classes = useStyles();
 
   const [ values, handleChanges, clearForm ] = useForm({
-    firstName: "",
+    firstName: localStorage.getItem('name'),
     lastName: "",
     email: ""
   });

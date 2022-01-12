@@ -32,7 +32,7 @@ const useLocalStorage = (key, initValue) => {
   //4. Any time we setState, also set localStorage
 
   const [ value, setValue] = useState(()=> {
-    return initValue;
+    return "chris";
   });
 
   return[value, setValue];

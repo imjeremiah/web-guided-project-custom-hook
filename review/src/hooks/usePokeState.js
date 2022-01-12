@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+
 const usePokeState = () => {
     const [pokemen, setPokemen] = useState([]);
     const [selectedPokemon, setSelectedPokemon] = useState({});

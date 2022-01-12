@@ -4,6 +4,8 @@ import "./styles.scss";
 import SelectedPoke from './components/SelectedPoke';
 import PokeList from './components/PokeList';
 
+import usePokeState from './hooks/usePokeState';
+
 import getPokemen from './services/getPokemen';
 import getPokemon from './services/getPokemon';
 

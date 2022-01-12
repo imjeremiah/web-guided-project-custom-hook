@@ -24,6 +24,10 @@ const useStyles = makeStyles(theme => ({
 }));
 
 
+const useLocalStorage = () => {
+  
+}
+
 export default function SignupForm() {
   const classes = useStyles();
 
@@ -43,9 +47,9 @@ export default function SignupForm() {
   return (
     <div p={2} className="form">
       <h1>{name}</h1>
-      <button onClick=()=> {
+      <button onClick={()=> {
         setName("Allison");
-      }>Change Names</button>
+      }}>Change Name</button>
       <form onSubmit={handleSubmit}>
         <fieldset>
           <legend>Add New Client</legend>

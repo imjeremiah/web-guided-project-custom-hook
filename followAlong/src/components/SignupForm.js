@@ -45,10 +45,12 @@ const useForm = (initName) => {
 export default function SignupForm() {
   const classes = useStyles();
 
-  const [ firstName, handleChanges, clearForm ] = useForm({
+  const [ values, handleChanges, clearForm ] = useForm({
     firstName: "",
     lastName: ""
   });
+
+  console.log(values);
 
   const handleSubmit = e => {
     e.preventDefault();

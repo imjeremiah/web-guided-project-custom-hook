@@ -20,12 +20,15 @@ const usePokeState = () => {
     getPokemon(id, setSelectedPokemon);
   };
 
+  console.log("Finished hook");
   return [selectedPokemon, pokemen, handlePoke];
 }
 
 function App() {
+  console.log("Start compliation");
   const [selectedPokemon, pokemen, handlePoke] = usePokeState();
   
+  console.log("Rendering");
   return (
     <div className="App">
       <SelectedPoke selectedPokemon={selectedPokemon}/>

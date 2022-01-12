@@ -20,10 +20,11 @@ const usePokeState = () => {
     getPokemon(id, setSelectedPokemon);
   };
 
-  
+
 }
 
 function App() {
+  const [selectedPokemon, pokemen, ]
   
   return (
     <div className="App">

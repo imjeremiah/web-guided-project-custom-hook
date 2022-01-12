@@ -33,6 +33,8 @@ export default function SignupForm() {
     email: ""
   });
 
+  const [name, setName ] = useState("Warren");
+
   const handleSubmit = e => {
     e.preventDefault();
     alert(`${values.firstName} ${values.lastName} ${values.email}`);
@@ -40,6 +42,10 @@ export default function SignupForm() {
 
   return (
     <div p={2} className="form">
+      <h1>{name}</h1>
+      <button onClick=()=> {
+        setName("Allison");
+      }>Change Names</button>
       <form onSubmit={handleSubmit}>
         <fieldset>
           <legend>Add New Client</legend>

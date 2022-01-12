@@ -5,7 +5,7 @@ import data from "../data";
 
 const SelectedPoke = (props) => {
   const { selectedPokemon } = props;
-  
+
   return (<div id="selectedDiv">
     <h2>Selected Pokemon: {selectedPokemon.name || "none"}</h2>
     {selectedPokemon.name && (
@@ -46,7 +46,8 @@ function App() {
 
   return (
     <div className="App">
-      <SelectedPoke />
+      <SelectedPoke selectedPokemon={selectedPokemon}/>
+      <SelectedPoke selectedPokemon={selectedPokemon}/>
 
       <div id="pokeList">
         {pokemen.map((pokemon) => (

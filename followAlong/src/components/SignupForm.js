@@ -24,8 +24,10 @@ const useStyles = makeStyles(theme => ({
 }));
 
 
-const useLocalStorage = () => {
-  
+const useLocalStorage = (initValue) => {
+  const [ value, setValue] = useState(initValue);
+
+  return[value, setValue];
 }
 
 export default function SignupForm() {

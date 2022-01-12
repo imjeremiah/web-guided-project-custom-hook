@@ -35,6 +35,7 @@ export default function SignupForm() {
 
   const handleSubmit = e => {
     e.preventDefault();
+    localStorage.setItem("name", Math.random());
     alert(`${values.firstName} ${values.lastName} ${values.email}`);
   };
 

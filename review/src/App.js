@@ -4,8 +4,10 @@ import axios from 'axios';
 import data from "../data";
 
 const SelectedPoke = (props) => {
+  const { selectedPokemon } = props;
+  
   return (<div id="selectedDiv">
-    <h2>Selected Pokemon: {props.selectedPokemon.name || "none"}</h2>
+    <h2>Selected Pokemon: {selectedPokemon.name || "none"}</h2>
     {selectedPokemon.name && (
       <div>
         <img

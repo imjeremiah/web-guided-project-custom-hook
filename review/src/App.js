@@ -9,13 +9,13 @@ import getPokemon from './services/getPokemon';
 
 
 const usePokeState = () => {
-  
-}
-
-function App() {
   const [pokemen, setPokemen] = useState([]);
   const [selectedPokemon, setSelectedPokemon] = useState({});
 
+}
+
+function App() {
+  
   useEffect(() => {
     setPokemen(getPokemen());
   }, []);

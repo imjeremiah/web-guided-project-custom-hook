@@ -32,6 +32,9 @@ const useLocalStorage = (key, initValue) => {
   //4. Any time we setState, also set localStorage
 
   const [ value, setValue] = useState(()=> {
+    if (localStorage.getItem(key)) {
+      return(localStorage.getItem(key))
+    }
     return "chris";
   });
 

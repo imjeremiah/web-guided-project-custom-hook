@@ -26,8 +26,8 @@ const useStyles = makeStyles(theme => ({
 //2. Add in all stateful logic into this hook.
 //3. Return all needed values from this hook.
 //4. Replace useState with useForm.
-const useForm = () => {
-  const [firstName, setFirstName] = useState("");
+const useForm = (initName) => {
+  const [firstName, setFirstName] = useState(initName);
 
   const handleChanges = e => {
     setFirstName(e.target.value);
@@ -45,7 +45,7 @@ const useForm = () => {
 export default function SignupForm() {
   const classes = useStyles();
 
-  const [ firstName, handleChanges, clearForm ] = useForm();
+  const [ firstName, handleChanges, clearForm ] = useForm("");
 
   const handleSubmit = e => {
     e.preventDefault();
